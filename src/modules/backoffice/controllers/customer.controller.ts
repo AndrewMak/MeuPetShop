@@ -1,19 +1,23 @@
-import { Controller } from "@nestjs/common";
+import { Controller, Get, Post, Put, Delete } from "@nestjs/common";
 
-@Controller()
+//localhost:3000/customer
+@Controller('v1/customers')
 export class CustomerController {
+    @Get()
     get() {
 
         return 'obter os clientes';
     }
-
+    @Post()
     post() {
-        return 'obter os clientes';
+        return 'post os clientes';
     }
+    @Put()
     put() {
-        return 'obter os clientes';
+        return 'put os clientes';
     }
+    @Delete()
     delete() {
-        return 'obter os clientes';
+        return 'delete os clientes';
     }
 }
